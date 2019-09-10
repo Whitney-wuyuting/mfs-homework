@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>form_2</title>
+    </head>
+    <body>
+        <h2>用户信息搜集</h2>
+        <form action="action_page.php" method="POST">
+            <div>
+                <input type="hidden" name="hidden" value="No.1"/>
+            </div>
+            <div>
+                用户名：<input type="text" name="username" placeholder="请输入用户名" required autofocus/>
+            </div>
+            <div>
+                密码：<input type="password" name="password" required/>
+            </div>
+            <div>
+                邮箱：<input type="email" name="email" required/>
+            </div>
+            <div>
+                手机号码：<input type="tel" name="tel" required/>
+            </div>
+            <div>
+                出生日期：<input type="date" name="birth"/>
+            </div>
+            <div>
+                性别：<input type="radio" name="sex" value="male"/>男<input type="radio" name="sex" value="femal"/>女
+            </div>
+            <div>
+                身份证号：<input type="number" name="IDnumber"/>
+            </div>
+            <div>
+                特长：<input type="checkbox" name="skill" value="HTML"/>HTML<input type="checkbox" name="skill" value="CSS"/>CSS<input type="checkbox" name="skill" value="JS"/>JavaScript
+            </div>
+            <div>
+                所在城市:<select name="city">
+                    <option></option>
+                    <option value="Beijing">北京</option>
+                    <option value="Chongqing">重庆</option>
+                    <option value="Chengdu">成都</option>
+                </select>
+            </div>
+                喜爱的电脑<input list="computers">
+                <datalist id=computers>
+                <option label="RMB6k" value="DELL"></option>
+                <option label="RMB5K" value="Lenovo"></option>
+                <option label="RMB1w" value="Apple"></option>
+                </datalist>
+            <div>
+                个人主页：<input type="url" name="url"/>
+            </div>
+            <div>
+                喜爱的颜色：<input type="color" name="color"/>
+            </div>
+            <div>
+                对编程的喜爱程度：<input type="range"/>
+            </div>
+            <div>
+                简介：<br/>
+                 <textarea name="introduction">介绍一下自己吧……</textarea>
+            </div>
+            <div>
+                技能展示文件：<input type="file"/>
+            </div>
+            <br/>
+            <input type="submit" name="submit" value="提交"/>
+            <input type="reset" name="reset" value="重置"/>
+            <input type="button" name="button" value="取消"/>
+            <br/>
+            <div>
+            下载此表单文件：<br/>
+            <input type="image" name="imagebutton" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1568112985599&di=03f3c7431c317f1adc1e6541fee54408&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F92%2F79%2F1156f2366f674ea.jpg" width="30"/>
+            </div>
+        </form>
+    </body>
+</html>
