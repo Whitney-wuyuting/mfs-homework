@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BoxModel</title>
+    <style>
+        .out{
+            height: 500px;
+            width:500px;
+            border:black 1px solid;
+            position: relative;
+        }
+        .in{
+            position:absolute;
+            background-color: pink;
+            height:100px;
+            width:200px;
+            margin:auto;
+            border: 5px solid black;
+            line-height: 100px;
+            text-align: center;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="out">
+        <div class="in">
+            今天是星期天。
+        </div>
+    </div>
+</body>
+
+</html>
