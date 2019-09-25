@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>dice</title>
+    <style>
+        .container {
+            width: 1000px;
+            height: 150px;
+            background: rgb(45, 45, 45);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .container>div {
+            width: 100px;
+            height: 100px;
+            background: white;
+            padding: 5px;
+            border-radius: 10px;
+            display: flex;
+        }
+
+        .circle {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: black;
+        }
+
+        .one {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .two,.three,.four,.five,.six{
+            justify-content: space-between;
+        }
+
+        .t2,.th3{
+            align-self: flex-end;
+        }
+
+        .th2,.f2{
+            align-self: center;
+        }
+
+        .f{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="one">
+            <div class="circle"></div>
+        </div>
+        <div class="two">
+            <div class="circle"></div>
+            <div class="circle t2"></div>
+        </div>
+        <div class="three">
+            <div class="circle"></div>
+            <div class="circle th2"></div>
+            <div class="circle th3"></div>
+        </div>
+        <div class="four">
+            <div class="f">
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+            <div class="f">
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+        </div>
+        <div class="five">
+            <div class="f">
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+            <div class="circle f2"></div>
+            <div class="f">
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+        </div>
+        <div class="six">
+            <div class="f">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+            </div>
+            <div class="f">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
