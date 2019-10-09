@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>码蜂社标题</title>
+    <style>
+        h3{
+            margin:100px;
+            padding: 20px 30px;
+            border: 1px solid #333;
+            font-weight: 500;
+            border-radius: 10px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-sizing: border-box;
+            width: 220px;
+        }
+        .en{
+            font-size: 12px;
+            line-height: 13.8px;
+        }
+        .ch{
+            margin-top: 8px;
+            font-size: 28px;
+            line-height:32.2px;
+        }
+        h3::before{
+            content:" ";
+            width:40px;
+            height: 40px;
+            background: #ffea00;
+            border-radius: 50%;
+            position: absolute;
+            left:-20px;
+            top:30px;
+            z-index: 1;
+            display: block;
+        }
+        h3::after{
+            content: " ";
+            width: 0;
+            height: 0;
+            border: 20px solid transparent;
+            border-right:20px solid #ffea00;
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            z-index: 1;
+            display: block;
+            transform: rotate(-16deg);
+        }
+    </style>
+</head>
+<body>
+    <h3>
+        <span class="en">SHARED COURSE</span>
+        <span class="ch">课程分享</span>
+    </h3>
+</body>
+</html>
