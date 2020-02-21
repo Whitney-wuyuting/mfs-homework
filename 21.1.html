@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>完全居中</title>
+    <style>
+        .container1 {
+            text-align: center;
+            height: 150px;
+            width: 400px;
+            background-color: lightpink;
+        }
+
+        .item1 {
+            line-height: 150px;
+        }
+
+        .container2 {
+            height: 150px;
+            width: 400px;
+            background-color: lightgreen;
+            position: relative;
+        }
+
+        .item2 {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            height: 20px;
+            width: 93px;
+            background-color: red;
+        }
+
+        .container3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+            width: 400px;
+            background-color: lightskyblue;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container1">
+        <div class="item1">
+            this is item1
+        </div>
+    </div>
+    <div class="container2">
+        <div class="item2">
+            this is item2
+        </div>
+    </div>
+    <div class="container3">
+        <div class="item3">
+            this is item3
+        </div>
+    </div>
+</body>
+
+</html>

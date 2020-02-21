@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex布局实现圣杯布局</title>
+    <style>
+        #bd {
+            display: flex;
+        }
+
+        .main {
+            background-color: lightblue;
+            flex:1;
+        }
+
+        .sub {
+            background-color: lightpink;
+            width: 200px;
+            order: -1;
+        }
+
+        .extra {
+            background-color: lightsalmon;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="bd">
+        <div class="main">main</div>
+        <div class="sub">sub</div>
+        <div class="extra">extra</div>
+    </div>
+</body>
+
+</html>
