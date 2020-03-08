@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>抽奖</title>
+    <style>
+        #award {
+            height: 40px;
+            width: 300px;
+            background-color: lightpink;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 10px;
+        }
+
+        .action {
+            width: 300px;
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="award">点击“开始“按钮，开始抽奖！</div>
+    <br>
+    <div class="action">
+        <button id="start">开 始</button>
+        <button id="stop">停 止</button>
+    </div>
+    <script>
+        function gift_() {
+            var rand = Math.random();
+            if (rand < 0.01) {
+                return ("特等奖")
+            }
+            else if (rand < 0.11) {
+                return ("一等奖")
+            }
+            else if (rand < 0.41) {
+                return ("二等奖")
+            }
+            else if (rand < 0.81) {
+                return ("三等奖")
+            }
+            else {
+                return ("鼓励奖")
+            }
+        }
+        document.getElementById("start").onclick = begin;
+        document.getElementById("stop").onclick = stop;
+
+        function begin() {
+            timer = setInterval(function () {
+                document.getElementById("award").innerHTML = gift_();
+            }, 30)
+
+        }
+        function stop() {
+            clearInterval(timer);
+        }
+
+    </script>
+</body>
+
+</html>
