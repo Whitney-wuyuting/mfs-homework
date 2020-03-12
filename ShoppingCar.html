@@ -95,13 +95,10 @@
         var ogoods = document.getElementById("goods");
         //var dels = new Array();
         var ocont = new Array();
-        /*
-        if (window.performance) {
-            console.info("window.performance works fine on this browser");
-        }*/
+
         if (performance.navigation.type == 1) {
             console.info("This page is reloaded");
-            location.hash = '/app/homepage'
+            //location.hash = '/app/homepage'
             var myStr = localStorage.getItem("key");
             var substrArray = myStr.split(",");
             for (i = 0; i < substrArray.length; i++) {
