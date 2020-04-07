@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片懒加载</title>
+    <style>
+        .a {
+            height: 1000px;
+        }
+
+        img {
+            height: 194px;
+            width: 350px;
+            background-color:rgb(240,96,47);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="a"></div>
+    <div class="a"></div>
+    <img data-src="https://i0.hdslb.com/bfs/archive/4de86ebf90b044bf9ba2becf042a8977062b3f99.png" alt="">
+    <div class="a"></div>
+    <div class="a"></div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script>
+        function isShow($node) {
+            var windowH = $(window).height();
+            var scrollTop = $(window).scrollTop();
+            var nodeOT = $node.offset().top;
+            var nodeH = $node.height();
+            return nodeOT <= scrollTop + windowH && nodeOT + nodeH >= scrollTop
+        }
+        window.onscroll = function () {
+            console.log(isShow($('img')))
+            if (isShow($('img'))) {
+                $('img').attr("src", $('img').data('src'));
+            }
+        }
+    </script>
+</body>
+
+</html>
