@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LazyImg</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <style>
+        .a {
+            height: 500px;
+            background-color: pink;
+        }
+        
+        img {
+            height: 150px;
+            width:341px;
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <img data-src="https://i0.hdslb.com/bfs/archive/eec1a14f91e9568326fec88918df90d84defd133.jpg@880w_388h_1c_95q">
+    <div class="a"></div>
+    <div class="a"></div>
+
+    <script>
+        function isShow($node) {
+            var windowH = $(window).height();
+            var scrollTop = $(window).scrollTop();
+            var nodeOT = $node.offset().top;
+            var nodeH = $node.height();
+            return nodeOT <= scrollTop + windowH && nodeOT + nodeH >= scrollTop
+        }
+
+        function lazyImg($node) {
+            var timer;
+            window.onscroll = function() {
+                clearTimeout(timer);
+                timer = setTimeout(function() {
+                    console.log(isShow($node))
+                    if (isShow($node)) {
+                        $node.attr("src", $node.data('src'));
+                    }
+                }, 50)
+            }
+        }
+        new lazyImg($("img"));
+    </script>
+</body>
+
+</html>
