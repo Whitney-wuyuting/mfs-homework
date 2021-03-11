@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        .slide-fade-enter-active,
+        .slide-fade-leave-active {
+            transition: opacity .3s;
+        }
+
+        .slide-fade-enter,
+        .slide-leave-to {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <button @click="addNumber">Add</button>
+        <button @click="delNumber">Remove</button>
+        <transition-group name="slide-fade">
+            <span v-for="(i,index) in message" :key="index">{{i}}</span>
+        </transition-group>
+    </div>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                message: [
+                    1, 2, 3, 4, 5, 6, 7, 8, 10
+                ]
+            },
+            methods: {
+                GetRandom: function () {
+                    return Math.floor(Math.random() * this.message.length)
+                },
+                addNumber: function () {
+                    this.message.splice(this.GetRandom(), 0, this.GetRandom())
+                },
+                delNumber: function () {
+                    this.message.splice(this.GetRandom(), 1)
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
